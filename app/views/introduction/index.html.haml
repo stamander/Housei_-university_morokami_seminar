@@ -1,0 +1,106 @@
+.header
+  .header__logo 
+
+    = link_to image_tag("logo1.jpg",class: "header__logo"), root_path
+     
+  
+  .header__another-box
+    .header__another-box__about 
+      = link_to "/front/:id", class: "header__another-box__about" do
+        %span<>
+        about us
+
+    .header__another-box__link 
+      = link_to "history" ,class: "header__another-box__link" do
+        %span<>
+        history
+    .header__another-box__introduction 
+      = link_to "introduction",class: "header__another-box__introduction" do
+        %span<>
+        introduction
+    .header__another-box__contact 
+      = link_to "contact",class: "header__another-box__contact" do
+        %span<>
+        contact
+    
+.consumer-box1
+  .title-box1
+  .contents2
+    introduction
+
+.profile-group
+  .profile3
+    .contents
+      %h2  担当教員プロフィール
+      諸上茂光（もろかみ しげみつ）
+      博士 (工学)(筑波大学)
+      %br
+      %br
+      %span<研究室
+      %br
+      多摩キャンパス 社会学部棟915
+      %br
+      %br
+      %span<専門分野
+      %br
+      脳科学・広告科学
+      %br
+      %br
+      %span<経歴
+      %br
+      筑波大学 第三学群工学システム学類卒
+      %br 同大 大学院システム情報工学研究科 博士一貫課程(５年制)修了
+      同大 大学院システム情報工学研究科 研究員
+      %br 愛知淑徳大学 ビジネス学部 専任講師
+      愛知淑徳大学 人間情報学部 准教授
+      %br 法政大学 社会学部 准教授
+      (現在に至る)
+      %br
+    = image_tag '56016.jpg', alt: 'a', height: '200px', width: '160px', class: 'images'
+
+  .profile4
+    %br
+    %h2 主な研究実績 
+    
+    ・地域ブランディングにおけるコンテクスト構造のモデル化 (地域デザイン学会誌,2020)
+    %br・Analyzing the effectiveness of suppliers’ empathetic responses for negative comments on viral websites (IJAMS ,2019)
+    ・情動の社会的共有動機に着目した悪い口コミへの適切な返信内容の検討 (日本経営システム学会誌,2019)
+    %br・Effective replies to negative online comments considering customers' motivations - Comparison between Japanese and Thai- (18TH International Marketing Trends Conference,2019)
+    ・Influence of Purchase Context on Consumer Information-Seeking Behaviors and Product Evaluation: A Comparison of Investigations Through Eye-tracking Data and Evaluation Questionnaires (14th International Marketing Trends Conference,2015)
+    %br・Relationship between the Context of a Purchase and the Consumer's Information-Seeking Behavior based on Computational Neuroscience(TBS-CLSG International Conference Series,2013)
+    ・Visual Effects of Guide Signs and Advertisements Arrangement in Public Spaces(IJAMS,2010)
+    %br・「Attribute pair-based visual recognition and memory」(PLoS ONE,2010)
+    ・「ニューロマーケティング研究の現状と今後の展開」(日経広告研究所報2008)
+    %br・「形式ニューロンモデルを応用した広告効果の動態的モデルの構築」（日本経営システム学会2008）
+    ・「広告効果の動態的モデルに基づく態度変容パターンのシミュレーション実験」(日本経営システム学会誌2008)
+    %br・「現代広告における外国人モデル起用についての考察：コケージアン・モデル使用広告の認知的・心理的効果の検証」(国際ビジネス研究学会年報2005)
+    ・「視覚系における情報統合および連合記憶のメカニズム」（博士論文，2005・筑波大学)
+    %br・「Two-attribute hypothesis in human visual feature integration」(International Workshop on Man-Machine Symbiotic Systems,2004)
+    ・「嗅周皮質の可塑性に基づく受動的連合形成のモデル」(日本神経回路学会誌,2003)
+    %br 
+    %br
+    %span
+    = link_to "詳しくはこちら","https://researchmap.jp/morokami/published_papers", class: "link"
+
+  .profile5
+    %br 
+    %h2 所属学会 
+    電子情報通信学会
+    %br 日本神経回路学会
+    日本社会心理学会
+    %br 日本マーケティング学会
+    日本消費者行動研究学会
+    %br 日本広報学会
+    日本広告学会
+    %br 国際ビジネス研究学会
+    日本経営システム学会 
+    %br 地域デザイン学会
+    Society for Consumer Psychology 
+    %br Association For Consumer Research 
+
+
+
+:javascript
+  src="/scrollreveal.min.js"
+  window.sr = ScrollReveal({ reset: true ,mobile: true});
+  sr.reveal('.contents2',{ origin: 'bottom' , distance: '50%', duration: 2000 , scale: 0.8, delay :0 ,opacity: 0});

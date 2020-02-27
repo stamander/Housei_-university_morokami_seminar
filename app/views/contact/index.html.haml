@@ -1,0 +1,92 @@
+
+
+
+.header
+  .header__logo 
+
+    = link_to image_tag("logo1.jpg",class: "header__logo"), root_path
+    
+  
+  .header__another-box
+    .header__another-box__about 
+      = link_to "/front/:id", class: "header__another-box__about" do
+        %span<>
+        about us
+
+    .header__another-box__link 
+      = link_to "history" ,class: "header__another-box__link" do
+        %span<>
+        history
+    .header__another-box__introduction 
+      = link_to "introduction",class: "header__another-box__introduction" do
+        %span<>
+        introduction
+    .header__another-box__contact 
+      = link_to "contact",class: "header__another-box__contact" do
+        %span<>
+        contact
+    
+
+.consumer-box1
+  .title-box2
+  .contents2
+    contact
+.main-box
+
+  .contact-box
+    %h1
+      contact
+    メールでのお問い合わせ先は
+    %span<acc.morokami@gmail.com
+    です。
+    %br
+
+    諸上ゼミtwitterアカウントは
+    = link_to "@morozemi_hosei", "https://twitter.com/morozemi_hosei"
+    です。
+    %br
+    %br
+
+    %h1 selection
+    
+    入ゼミに関するご質問は
+    %span<morozemi13th@gmail.com
+    までメールをお願いします。
+    %br
+   
+    入ゼミ・ゼミ選考に関する情報は
+    %br
+    = link_to "諸上ゼミ14期生選考ページ","http://morozemi.ws.hosei.ac.jp/morozemi14.html",class:"task"
+    %br
+      で更新していきます。
+
+
+  .link-box
+    %h1
+      link
+    = link_to "・法政大学","http://www.hosei.ac.jp/"
+    %br
+    = link_to "・法政大学社会学部","http://www.hosei.ac.jp/shakai/index.html"
+    
+    %br
+    = link_to "・法政大学図書館","http://www.hosei.ac.jp/library/index.html"
+    
+    %br
+    = link_to "・国立国会図書館","https://www.ndl.go.jp/"
+    
+    %br
+    = link_to "・CiNii","https://ci.nii.ac.jp/"
+    
+    %br
+    = link_to "・Google Scholar","https://scholar.google.co.jp/"
+    
+    %br
+    = link_to "・Dropbox","https://www.dropbox.com/"
+    
+
+
+
+:javascript
+  src="scrollreveal.min.js"
+  window.sr = ScrollReveal({ reset: true ,mobile: true});
+  sr.reveal('.contents2',{ origin: 'bottom' , distance: '50%', duration: 2000 , scale: 0.8, delay :0 ,opacity: 0});

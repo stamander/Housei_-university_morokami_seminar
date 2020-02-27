@@ -1,0 +1,69 @@
+.wrapper
+
+  .header
+    .header__logo 
+
+      = link_to image_tag("logo1.jpg",class: "header__logo"), root_path
+      
+    
+    .header__another-box
+      .header__another-box__about 
+        = link_to "/front/:id", class: "header__another-box__about" do
+          %span<>
+          about us
+
+      .header__another-box__link 
+        = link_to "history" ,class: "header__another-box__link" do
+          %span<>
+          history
+      .header__another-box__introduction 
+        = link_to "introduction",class: "header__another-box__introduction" do
+          %span<>
+          introduction
+      .header__another-box__contact 
+        = link_to "contact",class: "header__another-box__contact" do
+          %span<>
+          contact
+      
+
+
+  .photo-box
+    %ul.slider
+      = image_tag 'photo1.jpg', alt: 's', class: 'photo1'
+      = image_tag 'photo2.jpg', alt: 's', class: 'photo2'
+      = image_tag 'photo3.jpg', alt: 's', class: 'photo3'
+      = image_tag 'photo4.jpg', alt: 's', class: 'photo4'
+      = image_tag 'photo5.jpg', alt: 's', class: 'photo5'
+      = image_tag 'photo6.jpg', alt: 's', class: 'photo6'
+      
+    .photo-box__logo-box 
+      .photo-box__logo-box__contents1 MOROKAMI SEMINAR
+      = link_to "/front/:id",class: "photo-box__logo-box__contents2" do
+        %span<>
+        What is Morokami Seminar ? 
+
+  .title information
+  .news-box 
+
+    %html
+    .iframe-wrap
+      %iframe{src: "https://morozemi.ws.hosei.ac.jp/whatsnew.html", class:"info"}
+    .news-box__twitter
+      %html
+      %a.twitter-timeline{:href => "https://twitter.com/morozemi_hosei?ref_src=twsrc%5Etfw"} Tweets by morozemi_hosei
+      %script{:async => "", :charset => "utf-8", :src => "https://platform.twitter.com/widgets.js"}
+
+
+
+
+:javascript
+  $(function() {
+    $('.slider').not('.slick-initialized').slick({
+      arrows: true,
+      vertical: false,
+      autoplay:true,
+      autoplayspeed:500,
+    });
+  });
+
+
