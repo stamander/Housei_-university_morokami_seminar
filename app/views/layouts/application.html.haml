@@ -1,11 +1,17 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Jack
+    %title 法政大学社会学部諸上ゼミ
+    %meta{charset: "utf-8"}
     = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'application', media: 'all', data:{ turbolinks:{ track: true }}
+    %link{ rel: "stylesheet", type: "text/css", href: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"}
+    = javascript_include_tag 'application', data: { turbolinks: { track: true }}
+    %script{ type: "text/javascript", src: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"}
+    
+
+
   %body
     = yield
+
+  .footer COPYRIGHT © Morokami Seminar 2020. ALL RIGHTS RESERVED.Powered by Atsushi Iida 2020
