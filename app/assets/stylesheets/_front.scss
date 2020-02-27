@@ -1,0 +1,244 @@
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.header{
+
+  height: 90px;
+  width: 100%;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+  background-color: white;
+
+
+  &__logo{
+    
+    height: 100px;
+    width: 120px;
+    margin-left: 10%;
+   
+  }
+  &__logo:hover{
+  
+    transition: 1s;
+  }
+
+  &__another-box{
+    display: flex;
+    margin-left: 10%;
+    width: 60%;
+    justify-content: space-between;
+    
+    
+    &__about{
+      width: 100px;
+      height: 100px;
+
+    }
+    &__about:hover{
+  
+      transition: 1s;
+    }
+  
+    &__introduction{
+      width: 100px;
+      height: 100px;
+  
+    }
+    &__introduction:hover{
+
+      transition: 1s;
+    }
+
+
+    &__contact{
+      width: 100px;
+      height: 100px;
+      
+    }
+
+    &__contact:hover{
+    
+      transition: 1s;
+    }
+    
+    &__link{
+      width: 100px;
+      height: 100px;
+
+    }
+
+    &__link:hover{
+    
+      transition: 1s;
+    }
+  }
+}
+
+
+.photo-box{
+  width: 790px;
+  height: 500px;
+  position: relative;
+  margin:auto;
+
+  .slider{
+    position: absolute;
+
+    width: 800px;
+
+    margin: 0 auto;
+    
+    .photo1{
+
+  
+      height: 500px;
+
+      margin: auto;
+    }
+    .photo2{
+
+      height: 500px;
+
+      margin: auto;
+    }
+    .photo3{
+
+      height: 500px;
+
+    }
+    .photo4{
+
+      height: 500px;
+
+      margin: auto;
+    }
+    .photo5{
+
+      height: 500px;
+
+      margin: auto;
+    }
+    .photo6{
+ 
+      height: 500px;
+
+      margin: auto;
+    }
+ 
+  }
+
+  &__logo-box{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    margin-top: 23%;
+    &__contents1{
+      color:whitesmoke;
+      width: 100%;
+      font-size: 50px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: bold;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    &__contents2{
+      color:whitesmoke;
+      border: 1px solid hsla(0,0%,100%,.7);
+      padding: 8px;
+      text-align: center;
+      margin-left: 250px;
+      border-radius: 22px;
+      font-size: 20px;
+
+      font-weight: bold;
+    
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+    
+  }
+}
+
+
+.title{
+  font-size: 30px;
+  margin-left: 100px;
+  color: orange;
+}
+.news-box{
+  display: flex;
+  height: 800px;
+  width: 900px;
+  margin: auto;
+  justify-content: space-evenly;
+  
+  
+
+
+
+  &__twitter{
+    width: 40%;
+    height:700px;
+    overflow: scroll;
+    border:2px solid #ccc; 
+  
+
+
+  }
+}
+
+
+.footer{
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  border-top: 1px solid;
+  margin:auto;
+}
+
+.photo-box__logo-box__contents2:hover{
+  background-color: rgba($color: #fcfafa, $alpha: 0.8);
+  transition: 1s;
+}
+
+
+
+.iframe-wrap {
+  position: relative;
+  width:40%;
+  height:700px;
+
+  overflow:auto; 
+  -webkit-overflow-scrolling:touch;
+  border:2px solid #ccc; 
+
+  .info{
+  
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:none;
+    display:block;
+  
+  
+  }
+}
+
+
+.wrapper{
+  position: relative;
+  min-height: 100vh;
+
+  .footer{
+    position: absolute;
+    bottom: 0;
+
+  }
+}

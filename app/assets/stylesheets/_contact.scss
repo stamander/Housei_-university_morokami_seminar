@@ -1,0 +1,60 @@
+.title-box2{
+  background-image: url("link&logo.jpg");
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 900px;
+  height: 100%;
+  margin: auto;
+}
+
+
+
+.main-box{
+  width: 900px;
+  display: flex;
+  margin: 100px auto;
+  color: gray;
+}
+
+.contact-box{
+  width: 60%;
+}
+
+.link-box{
+  margin-left: 100px;
+  width: 40%;
+}
+
+
+span{
+  color: black;
+}
+
+.task{
+  font-size: 25px;
+  border-bottom: solid rgb(236, 232, 232);
+  color: orange;
+}
+.task:hover{
+  color: black;
+  border-bottom: solid black;
+}
+
+.footer1{
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  border-top: 1px solid;
+  margin:auto;
+}
+.wrapper{
+  position: relative;
+  min-height: 100vh;
+
+  .footer1{
+    position: absolute;
+    bottom: 0;
+
+  }
+}
