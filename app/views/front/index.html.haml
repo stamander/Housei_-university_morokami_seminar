@@ -29,6 +29,7 @@
 
   .photo-box
     %ul.slider
+
       = image_tag 'photo1.jpg', alt: 's', class: 'photo1'
       = image_tag 'photo2.jpg', alt: 's', class: 'photo2'
       = image_tag 'photo3.jpg', alt: 's', class: 'photo3'
@@ -57,7 +58,7 @@
 
 
 :javascript
-  $(function() {
+  $(function(){
     $('.slider').slick({
       arrows: true,
       vertical: false,
