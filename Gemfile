@@ -68,3 +68,4 @@ end
 
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'passenger'
