@@ -71,3 +71,5 @@ end
 
 gem 'haml-rails'
 gem 'jquery-rails'
+
+gem 'mysql2'
