@@ -1,3 +1,39 @@
 .show-box
-  @profile.each do |member| 
+  .show-box-contents
+    - @profile.each do |member| 
+      %br
+      %br
+      %br
+      受講者名：
+      = member.name 
+      
+      %br
+      学部：
+      = member.undergraduate
+      
+      %br
+      学科：
+      = member.subject
+      
+      %br
+      GPA：
+      = member.gpa
+      
+      %br
+      志望動機：
+      = member.motivation
+      %br
+      自己PR：
+      = member.pr
+      %br
+      どのような学生生活を送りたいですか：
+      = member.life
+      %br
+      どのくらい時間をかけますか：
+      = member.time
+      %br
+      課題提出：
+      = member.task
+
+
     
