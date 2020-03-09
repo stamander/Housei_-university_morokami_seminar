@@ -1,0 +1,59 @@
+.form{
+  font-size: 30px;
+  text-align: center;
+}
+
+.form_box{
+  margin: auto;
+  width: 1000px;
+
+  margin-top: 100px;
+  
+}
+
+.form_box_contents{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  font-size: 20px;
+}
+
+#profile_name{
+  width: 500px;
+}
+
+#profile_undergraduate{
+  width: 500px;
+}
+
+#profile_subject{
+  width: 500px;
+}
+
+#profile_gpa{
+  width: 500px;
+}
+
+#profile_motivation{
+  width: 500px;
+  height: 300px;
+}
+
+#profile_pr{
+  width: 500px;
+  height: 300px;
+}
+
+#profile_life{
+  width: 500px;
+  height: 300px;
+}
+#profile_time{
+  width: 500px;
+}
+.send{
+  margin: auto;
+  width: 400px;
+  font-size: 1.2em;
+
+}
