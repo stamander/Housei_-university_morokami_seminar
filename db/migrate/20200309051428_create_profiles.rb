@@ -1,7 +1,10 @@
 class CreateProfiles < ActiveRecord::Migration[5.2]
   def change
     create_table :profiles do |t|
+      t.string :image,null:false
       t.string :name,null: false
+      t.string :kana,null: false
+      t.string :number,null: false
       t.string :undergraduate,null: false
       t.string :subject,null: false
       t.float :gpa,null: false

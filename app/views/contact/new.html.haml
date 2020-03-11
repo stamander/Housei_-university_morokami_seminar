@@ -1,11 +1,22 @@
 .form 課題提出フォーム
+= form_for @profile,url: contact_index_path,local: true do |f|
 
-= form_for @profile,url: contact_index_path,local: true do |f| 
-
+  .flash
+    = flash[:profile]
   .form_box
+    .form_box_contents
+      .form_box_contents_image プロフィール写真
+      = f.file_field :image 
     .form_box_contents
       .form_box_contents_name 名前
       = f.text_field :name, placeholder: "※必須　ex.山田太郎"
+
+    .form_box_contents
+      .form_box_contents_kana かな
+      = f.text_field :kana,placeholder: "※必須　ex.やまだ　たろう"
+    .form_box_contents
+      .form_box_contents_number 学籍番号
+      = f.text_field :number, placeholder: "※必須　ex.15e2201"
     .form_box_contents
       .form_box_contens_undergraduate 学部
       = f.text_field :undergraduate, placeholder: "※必須　ex.社会学部"
@@ -30,12 +41,14 @@
       .form_box_contens_time 入ゼミをした後どれだけ時間をかけられますか？
       = f.text_field :time, placeholder: "※必須"
     .form_box_contents
-      .form_box_contens_submit 課題提出
-      = f.file_field :task
+      .form_box_contens_submit 課題の答え
+      = f.text_area :task,placeholder: "※必須（参考文献も中に入れてください。書き方は論文を参考にしてください。）"
 
     %br
     %br
     .form_box_contents
       = f.submit "送信する",class:"send"
+
+
 
 

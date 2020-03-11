@@ -9,8 +9,10 @@ class ContactController < ApplicationController
   def create
     @profile= Profile.new(profile_params)
     if @profile.save
-      redirect_to root_path
+      flash[:profile] = 'お疲れ様です！提出が完了しました！！'
+      redirect_to new_contact_path
     else
+      flash[:profile] = 'まだ未入力の蘭があります'
       redirect_to new_contact_path
     end
   end
@@ -23,7 +25,7 @@ class ContactController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(:name,:undergraduate,:subject,:gpa,:motivation,:pr,:life,:time,:task)
+    params.require(:profile).permit(:image,:name,:kana,:number,:undergraduate,:subject,:gpa,:motivation,:pr,:life,:time,:task)
   end
   
 end

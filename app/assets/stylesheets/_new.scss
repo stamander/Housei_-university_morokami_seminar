@@ -3,12 +3,20 @@
   text-align: center;
 }
 
+.flash{
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: orangered;
+  background-color: orange;
+  margin-top: 50px;
+}
+
 .form_box{
   margin: auto;
   width: 1000px;
-
   margin-top: 100px;
-  
+
 }
 
 .form_box_contents{
@@ -16,9 +24,18 @@
   justify-content: space-between;
   margin-bottom: 100px;
   font-size: 20px;
+  color: black;
 }
 
 #profile_name{
+  width: 500px;
+}
+
+#profile_kana{
+  width: 500px;
+}
+
+#profile_number{
   width: 500px;
 }
 
@@ -51,10 +68,19 @@
 #profile_time{
   width: 500px;
 }
+
+#profile_task{
+  width: 500px;
+  height: 300px;
+}
 .send{
   margin: auto;
   width: 400px;
   font-size: 1.2em;
 
 
+}
+
+#text{
+  text-align: center;
 }
