@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_09_051428) do
+ActiveRecord::Schema.define(version: 2020_03_11_075001) do
+
+  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "image"
+    t.bigint "profile_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["profile_id"], name: "index_images_on_profile_id"
+  end
 
   create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image", null: false
@@ -29,4 +37,5 @@ ActiveRecord::Schema.define(version: 2020_03_09_051428) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "images", "profiles"
 end

@@ -4,6 +4,8 @@ class ContactController < ApplicationController
 
   def new
     @profile = Profile.new
+    @profile.images.new
+    
   end
 
   def create
@@ -19,6 +21,7 @@ class ContactController < ApplicationController
 
   def show
     @profile = Profile.all
+    @profile = Profile.includes(:images).order('created_at DESC')
   end
 
 
