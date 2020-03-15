@@ -28,7 +28,7 @@ class ContactController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(:image,:name,:kana,:number,:undergraduate,:subject,:gpa,:motivation,:pr,:life,:time,:task)
+    params.require(:profile).permit(:name,:kana,:number,:undergraduate,:subject,:gpa,:motivation,:pr,:life,:time,:task,images_attributes: [:src])
   end
   
 end

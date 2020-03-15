@@ -7,12 +7,10 @@
     .form_box_contents
       .form_box_contents_image プロフィール写真
 
-      - @profile.images.each_with_index do |image, i|
-        = image_tag image.image.url, data: { index: i }, width: "100", height: '100'
+      - @profile.images.each do |image|
+        = image_tag image.src.url
       = f.fields_for :images do |i|
-        .js-file_group{"data-index":i.index}
-          = i.file_field :image, class: 'js-file'
-
+        = i.file_field :src
 
 
     .form_box_contents

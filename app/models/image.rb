@@ -1,5 +1,5 @@
 class Image < ApplicationRecord
-  mount_uploader :image, ImageUploader
+  mount_uploader :src, ImageUploader
   belongs_to :profile
 
 

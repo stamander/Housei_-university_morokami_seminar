@@ -10,7 +10,7 @@ class Profile < ApplicationRecord
   validates :life, presence: true
   validates :time, presence: true
   validates :task, presence: true
-  validates :image, presence: true
+  validates :images, presence: true
   
 
 
