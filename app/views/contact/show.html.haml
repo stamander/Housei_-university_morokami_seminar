@@ -1,11 +1,12 @@
 .show-box
   .show-box-contents
-    - @profile.each do |member| 
+    - @profile.each do |member|
+   
       %br
       %br
       %br
       写真：
-      = member.images
+      %img{:src => "#{@image.src}"}
       %br
       受講者名：
       = member.name 

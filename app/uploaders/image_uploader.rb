@@ -15,7 +15,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   def default_url
-    '5期.png'
+    'slick.svg'
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
