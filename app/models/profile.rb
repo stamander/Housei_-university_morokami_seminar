@@ -1,5 +1,5 @@
 class Profile < ApplicationRecord
-  has_many :images,dependent: :destroy
+  has_many :images, dependent: :destroy
   accepts_nested_attributes_for :images, allow_destroy: true
   validates :name, presence: true
   validates :undergraduate, presence: true
@@ -10,7 +10,7 @@ class Profile < ApplicationRecord
   validates :life, presence: true
   validates :time, presence: true
   validates :task, presence: true
-  validates :images, presence: true
+
   
 
 
