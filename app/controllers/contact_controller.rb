@@ -1,4 +1,6 @@
 class ContactController < ApplicationController
+
+  
   def index
   end
 
@@ -20,19 +22,23 @@ class ContactController < ApplicationController
   end
 
   def show
-    @profiles = Profile.all
+    # basic_auth
     @profile = Profile.includes(:images).order('created_at DESC')
-    @images = Image.all
-    
   end
 
 
   private
 
+  def basic_auth
+    authenticate_or_request_with_http_basic do |username, password|
+      username == 'admin' && password == '2222'
+    end
+  end
+
   def profile_params
     params.require(:profile).permit(:name,:kana,:number,:undergraduate,:subject,:gpa,:motivation,:pr,:life,:time,:task,images_attributes: [:src,:_destroy, :id])
   end
-  
+
 end
 
 

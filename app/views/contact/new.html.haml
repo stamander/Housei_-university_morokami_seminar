@@ -6,9 +6,6 @@
   .form_box
     .form_box_contents
       .form_box_contents_image プロフィール写真
-      - if @profile.persisted?
-        - @profile.images.each_with_index do |image, i|
-          = image_tag image.src.url, data: { index: i }, width: "100", height: '100'
       = f.fields_for :images do |i|
         = i.file_field :src
 
@@ -55,6 +52,10 @@
     .form_box_contents
       = f.submit "送信する",class:"send"
 
+
+    .another
+      = link_to "ホームへ","/", class:"home"
+      = link_to "ゼミ生はこちら","/contact/:id", class:"zemi"
 
 
 
