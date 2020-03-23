@@ -22,8 +22,11 @@ class ContactController < ApplicationController
   end
 
   def show
+   
     # basic_auth
-    @profile = Profile.includes(:images).order('created_at DESC')
+    @profile = Profile.includes(:images).order('created_at DESC').first(6)
+
+    
   end
 
 

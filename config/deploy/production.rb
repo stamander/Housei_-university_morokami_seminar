@@ -1,6 +1,6 @@
 # config valid only for current version of Capistrano
 # capistranoのバージョンを記載。固定のバージョンを利用し続け、バージョン変更によるトラブルを防止する
-lock '3.12.0'
+lock '3.12.1'
 
 # Capistranoのログの表示に利用する
 set :application, 'Housei_-university_morokami_seminar'
@@ -32,3 +32,6 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 end
+
+
+server '3.113.66.92', user: 'ec2-user', roles: %w{app db web}

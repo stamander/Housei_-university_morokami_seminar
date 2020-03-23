@@ -3,6 +3,8 @@
     - @profile.each do |member|
       %br
       %br
+      %br 
+      = image_tag("#{member.images.first.src}")
       %br
       受講者名：
       = member.name 
@@ -41,7 +43,7 @@
       課題：
       = member.task
 
-      -# = image_tag @profile.src.url
+
 
    
       
