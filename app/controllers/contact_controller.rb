@@ -16,7 +16,7 @@ class ContactController < ApplicationController
       flash[:profile] = 'お疲れ様です！提出が完了しました！！'
       redirect_to new_contact_path
     else
-      flash[:profile] = 'まだ未入力の蘭があります'
+      flash[:profile] = 'まだ未入力の項目があります'
       redirect_to new_contact_path
     end
   end
