@@ -10,14 +10,23 @@ class ContactController < ApplicationController
     
   end
 
+  def confirm
+    @profile = Profile.new(profile_params)
+    render :new if @profile.invalid?
+  end
+
   def create
     @profile= Profile.new(profile_params)
-    if @profile.save
-      flash[:profile] = 'お疲れ様です！提出が完了しました！！'
-      redirect_to new_contact_path
+    respond_to do |format|
+    if params[:back]
+      format.html { render :new }
+    elsif @profile.save
+      format.html { redirect_to @award, notice: 'Award was successfully created.' }
+      format.json { render :show, status: :created, location: @profile }
     else
-      flash[:profile] = 'まだ未入力の項目があります'
-      redirect_to new_contact_path
+      format.html { render :new }
+      format.json { render json: @profile.errors, status: :unprocessable_entity }
+      end
     end
   end
 
