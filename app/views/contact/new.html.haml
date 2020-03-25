@@ -2,6 +2,8 @@
 = form_with(model: @profile, local: true, url: {action: 'confirm'}) do |f|
   .flash
     = flash[:profile]
+  .flash
+    = flash[:profiles]
 
   .form_box
     .form_box_contents

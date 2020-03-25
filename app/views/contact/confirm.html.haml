@@ -2,10 +2,15 @@
 = form_for @profile,url: contact_index_path,local: true do |f|
   .flash
     = flash[:profile]
+    = flash[:profiles]
 
   .form_box
-    .form_box_contentss
-      .form_box_contents_image プロフィール写真:(※確認のためもう一度お送りください)
+    .form_box_contentsss
+      .form_box_contents_image 
+      写真:
+      %br
+      (※確認のため同じ画像をもう一度選択して
+      %br ください)
       = f.fields_for :images do |i|
         = i.file_field :src 
         = image_tag("#{@profile.images.first.src}")
@@ -67,7 +72,5 @@
       = @profile.task
     %br
 
-    .form_box_contents
-      = f.submit '編集する', name: 'back',class:"send"
     .form_box_contents
       = f.submit '送信する',class:"send"

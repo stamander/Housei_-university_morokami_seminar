@@ -6,4 +6,5 @@ class Image < ApplicationRecord
 
 
 
+
 end
