@@ -10,14 +10,22 @@ class ContactController < ApplicationController
     
   end
 
+  def confirm
+    @profile = Profile.new(profile_params)
+    redirect_to new_contact_path if @profile.invalid?
+      flash[:profiles] = "まだ未入力の項目があります"
+  end
+
   def create
     @profile= Profile.new(profile_params)
     if @profile.save
-      flash[:profile] = 'お疲れ様です！提出が完了しました！！'
       redirect_to new_contact_path
+      flash[:profile] = "お疲れ様です。提出が完了しました！"
     else
-      flash[:profile] = 'まだ未入力の項目があります'
       redirect_to new_contact_path
+      flash[:profiles] = "まだ未入力の項目があります"
+      
+      
     end
   end
 
@@ -25,7 +33,6 @@ class ContactController < ApplicationController
    
     basic_auth
     @profile = Profile.includes(:images).order('created_at DESC')
-
     
   end
 

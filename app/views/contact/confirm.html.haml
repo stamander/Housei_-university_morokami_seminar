@@ -1,0 +1,79 @@
+.form 課題確認
+= form_for @profile,url: contact_index_path,local: true do |f|
+  .flash
+    = flash[:profile]
+    = flash[:profiles]
+
+  .form_box
+    .form_box_contentsss
+      .form_box_contents_image 
+      写真:
+      %br
+      (※確認のため同じ画像をもう一度選択して
+      %br ください)
+      = f.fields_for :images do |i|
+        = i.file_field :src 
+        = image_tag("#{@profile.images.first.src}")
+
+    .form_box_contentss
+      .form_box_contents_name 名前:
+      = f.hidden_field :name
+      = @profile.name
+    %br
+    .form_box_contentss
+      .form_box_contents_kana かな:
+      = f.hidden_field :kana
+      = @profile.kana
+
+    %br
+    .form_box_contentss
+      .form_box_contents_number 学籍番号:
+      = f.hidden_field :number
+      = @profile.number
+    %br
+    .form_box_contentss
+      .form_box_contents_undergraduate 学部:
+      = f.hidden_field :undergraduate
+      = @profile.undergraduate
+    %br
+    .form_box_contentss
+      .form_box_contents_subject 学科:
+      = f.hidden_field :subject
+      = @profile.subject
+    %br
+    .form_box_contentss
+      .form_box_contents_gpa GPA:
+      = f.hidden_field :gpa
+      = @profile.gpa
+    %br
+    .form_box_contentss
+      .form_box_contents_motivation 志望動機:
+      = f.hidden_field :motivation
+      = @profile.motivation
+    %br
+    .form_box_contentss
+      .form_box_contents_pr 自己PR:
+      = f.hidden_field :pr
+      = @profile.pr
+    %br
+    .form_box_contentss
+      .form_box_contents_life どのような学生生活を過ごしたいですか:
+      = f.hidden_field :life
+      = @profile.life
+    %br
+    .form_box_contentss
+      .form_box_contents_time ゼミにかけられる時間:
+      = f.hidden_field :time
+      = @profile.time
+    %br
+    .form_box_contentss
+      .form_box_contents_task 課題:
+      = f.hidden_field :task
+      = @profile.task
+    %br
+
+    .form_box_contentssss
+      ※必ず同じ画像をもう一度選択してください
+
+    .form_box_contents
+      = f.submit "確認画面へ",class:"send"

@@ -1,19 +1,18 @@
 .form 課題提出フォーム
-= form_for @profile,url: contact_index_path,local: true do |f|
-
+= form_with(model: @profile, local: true, url: {action: 'confirm'}) do |f|
   .flash
     = flash[:profile]
+  .flash
+    = flash[:profiles]
+
   .form_box
     .form_box_contents
       .form_box_contents_image プロフィール写真
       = f.fields_for :images do |i|
-        = i.file_field :src
-
-
+        = i.file_field :src ,id: :profile_contents
     .form_box_contents
       .form_box_contents_name 名前
       = f.text_field :name, placeholder: "※必須　ex.山田太郎"
-
     .form_box_contents
       .form_box_contents_kana かな
       = f.text_field :kana,placeholder: "※必須　ex.やまだ　たろう"
@@ -29,14 +28,12 @@
     .form_box_contents
       .form_box_contens_gpa 一年次のGPA
       = f.text_field :gpa, placeholder: "※必須　ex.4.0"
-
     .form_box_contents
       .form_box_contens_motivation 志望動機
       = f.text_area :motivation, placeholder: "※必須"
     .form_box_contents
       .form_box_contens_pr 自己PR
       = f.text_area :pr, placeholder: "※必須"
-
     .form_box_contents
       .form_box_contens_life 入ゼミした後どのような大学生活を送りたいですか？
       = f.text_area :life, placeholder: "※必須"
@@ -46,11 +43,8 @@
     .form_box_contents
       .form_box_contens_submit 課題の答え
       = f.text_area :task,placeholder: "※必須（参考文献も中に入れてください。書き方は論文を参考にしてください。）"
-
-    %br
-    %br
     .form_box_contents
-      = f.submit "送信する",class:"send"
+      = f.submit "確認画面へ",class:"send"
 
 
     .another
