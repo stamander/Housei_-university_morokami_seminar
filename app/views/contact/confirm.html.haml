@@ -1,14 +1,13 @@
 .form 課題確認
 = form_for @profile,url: contact_index_path,local: true do |f|
-
-
-
+  .flash
+    = flash[:profile]
 
   .form_box
-    .form_box_contents
-      .form_box_contents_image プロフィール写真
+    .form_box_contentss
+      .form_box_contents_image プロフィール写真:(※確認のためもう一度お送りください)
       = f.fields_for :images do |i|
-        = i.hidden_field :src ,id: :profile_contents
+        = i.file_field :src 
         = image_tag("#{@profile.images.first.src}")
 
     .form_box_contentss
@@ -69,6 +68,6 @@
     %br
 
     .form_box_contents
-      = f.submit '投稿画面に戻る', name: 'back',class:"send"
+      = f.submit '編集する', name: 'back',class:"send"
     .form_box_contents
-      = f.submit '投稿する',class:"send"
+      = f.submit '送信する',class:"send"

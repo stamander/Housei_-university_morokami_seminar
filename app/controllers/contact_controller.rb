@@ -17,16 +17,17 @@ class ContactController < ApplicationController
 
   def create
     @profile= Profile.new(profile_params)
-    respond_to do |format|
     if params[:back]
-      format.html { render :new }
+       render :new 
     elsif @profile.save
-      format.html { redirect_to @award, notice: 'Award was successfully created.' }
-      format.json { render :show, status: :created, location: @profile }
+      redirect_to new_contact_path
+      flash[:profile] = "お疲れ様です。提出が完了しました！"
     else
-      format.html { render :new }
-      format.json { render json: @profile.errors, status: :unprocessable_entity }
-      end
+      redirect_to new_contact_path
+      flash[:profile] = "まだ未入力の項目があります"
+    
+
+
     end
   end
 
@@ -34,6 +35,7 @@ class ContactController < ApplicationController
    
     basic_auth
     @profile = Profile.includes(:images).order('created_at DESC')
+    binding.pry
 
     
   end
