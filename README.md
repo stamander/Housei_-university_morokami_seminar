@@ -37,7 +37,6 @@ ruby,rails,haml,scss,javascript,jquery,git,AWS,mysql
 * iida.atsushi.fh@gmail.com
  
 # License
-ライセンスを明示する
- 
+
 COPYRIGHT © Morokami Seminar 2020. ALL RIGHTS RESERVED.Powered by Atsushi Iida 2020
  
