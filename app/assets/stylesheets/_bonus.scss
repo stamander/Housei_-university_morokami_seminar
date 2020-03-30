@@ -21,7 +21,29 @@
   padding-bottom: 100px;
   justify-content: space-evenly;
 
+  animation-name:left;
+  animation-duration:2s; 
+  animation-fill-mode: forwards;
+}
+
+@keyframes left {
+  0% {
+   opacity: 0;
+   transform: translateX(-100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
   
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .six-box{
   display: flex;
@@ -31,9 +53,21 @@
   border-bottom: 1px solid rgb(236, 232, 232);
   padding-bottom: 100px;
   justify-content: space-evenly;
+  animation-name:right;
+  animation-duration:5s; 
+  animation-fill-mode: forwards;
 
+}
 
-
+@keyframes right {
+  0% {
+   opacity: 0;
+   transform: translateX(100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .seven-box{
@@ -45,37 +79,62 @@
   border-bottom: 1px solid rgb(236, 232, 232);
   padding-bottom: 100px;
   justify-content: space-evenly;
-
+  animation-name:left;
+  animation-duration:7s; 
+  animation-fill-mode: forwards;
 }
 .eight-box{
   display: flex;
- 
   margin-bottom: 100px;
   justify-content: space-evenly;
   font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   border-bottom: 1px solid rgb(236, 232, 232);
   padding-bottom: 100px;
+
+  animation-name:right;
+  animation-duration:9s; 
+  animation-fill-mode: forwards;
 
 }
 .nine-box{
   display: flex;
   margin-bottom: 100px;
   justify-content: space-evenly;
-
   font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   border-bottom: 1px solid rgb(236, 232, 232);
   padding-bottom: 100px;
+  animation-name:left;
+  animation-duration:11s; 
+  animation-fill-mode: forwards;
+}
+
+.ten-box{
+  display: flex;
+  margin-bottom: 100px;
+  justify-content: space-evenly;
+  font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-bottom: 1px solid rgb(236, 232, 232);
+  padding-bottom: 100px;
+  animation-name:right;
+  animation-duration:13s; 
+  animation-fill-mode: forwards;
+  
+  
 }
 
 .eleven-box{
   display: flex;
-
   margin-bottom: 100px;
   font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   border-bottom: 1px solid rgb(236, 232, 232);
   padding-bottom: 100px;
   justify-content: space-evenly;
+  animation-name:left;
+  animation-duration:15s; 
+  animation-fill-mode: forwards;
 }
+
+
 .twelbe-box{
   display: flex;
   width: 100%;
@@ -84,6 +143,9 @@
   border-bottom: 1px solid rgb(236, 232, 232);
   padding-bottom: 100px;
   justify-content: space-evenly;
+  animation-name:right;
+  animation-duration:17s; 
+  animation-fill-mode: forwards;
 
 
 }
@@ -93,6 +155,9 @@
   margin-bottom: 100px;
   font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   justify-content: space-evenly;
+  animation-name:left;
+  animation-duration:19s; 
+  animation-fill-mode: forwards;
 }
 .image-9{
   height: 300px;
