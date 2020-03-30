@@ -1,24 +1,42 @@
-# README
+## readme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Name
+ 
+Housei_university_morokami_seminar_HP
+ 
+ゼミの内容が伝わりやすいのはもちろん、投稿フォーム機能をつけたので、ゼミ応募の時に役に立ちます。
+ 
+# DEMO
+ 
+"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
+<img width="1196" alt="スクリーンショット 2020-02-28 16 55 50" src="https://user-images.githubusercontent.com/59189641/75521631-7d552300-5a4b-11ea-8e99-8175113e0434.png">
+<img width="1265" alt="スクリーンショット 2020-02-28 16 55 56" src="https://user-images.githubusercontent.com/59189641/75521637-7f1ee680-5a4b-11ea-95f5-903c804e899c.png">
+<img width="1136" alt="スクリーンショット 2020-02-28 17 00 29" src="https://user-images.githubusercontent.com/59189641/75522036-4e8b7c80-5a4c-11ea-868e-91f5404f8ccc.png">
+ 
+# Features
 
-Things you may want to cover:
+活動内容がただわかるだけではなく、スライドショーやアニメーションにもこだわり、このホームページをみた人がワクワクするようなデザインにしています。
+またコーポレートサイトのように、web上でエントリーができるので利便性も向上している。
 
-* Ruby version
+# Requirement
+ruby,rails,haml,scss,javascript,jquery,git,AWS,mysql
+ 
 
-* System dependencies
 
-* Configuration
+ 
+# Note
+ 
+身内しか見ることができないページあり
+ 
+# Author
+ 
+作成情報を列挙する
+ 
+* atsushi_iida
+* フリーランス
+* iida.atsushi.fh@gmail.com
+ 
+# License
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+COPYRIGHT © Morokami Seminar 2020. ALL RIGHTS RESERVED.Powered by Atsushi Iida 2020
+ 
