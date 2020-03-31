@@ -36,6 +36,11 @@ class ContactController < ApplicationController
     
   end
 
+  def destroy
+    @profile = find_profile.id
+    @profile.destroy #destroyメソッドを使用し対象のツイートを削除する。
+  end
+
 
   private
 
