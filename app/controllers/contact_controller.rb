@@ -38,11 +38,11 @@ class ContactController < ApplicationController
 
 
   def destroy
-    @profile = Profile.find(params[:id])
+    @profile = Profile.find_by(id:params[:id])
     if @profile.destroy
-    redirect_to contact_path
+      redirect_to contact_path
     else
-      redirect_to contact_path(profile)
+      redirect_to contact_path
     end
   end
 
