@@ -1,12 +1,14 @@
-.tweet_title 新規記事の作成
-= form_for @private,url: new_private_path, local: true do |twe|
-= form_for @item,url: exhibitions_path ,local: true do |f|
+.form
+  .tweet_title 新規記事の作成
+  = form_for @private,url: new_private_path, local: true do |twe|
+    .form_box_contents
+    .title
+    = twe.text_field :title
+    .form_box_contents
+    .contents
+    = twe.text_area :content
 
-  .title
-  = twe.text_field :title
-
-  .contents
-  = twe.text_field :contents
+    .form_box_contents
 
 .another
   = link_to "ホームへ","/", class:"home"

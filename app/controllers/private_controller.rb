@@ -4,5 +4,7 @@ class PrivateController < ApplicationController
 
 
   def new
+    @private = Private.new
+
   end
 end
