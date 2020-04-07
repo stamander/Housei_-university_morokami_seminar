@@ -2,5 +2,11 @@
 = form_for @private do |twe|
 
   .title
-    = text.fie
+  = twe.text_field :title
 
+  .contents
+  = twe.text_field :contents
+
+.another
+  = link_to "ホームへ","/", class:"home"
+  = link_to "採用","/contact/:id", class:"zemi"
