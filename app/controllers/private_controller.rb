@@ -1,4 +1,7 @@
 class PrivateController < ApplicationController
+
+  before_action :basic_auth
+
   def index
   end
 
@@ -27,5 +30,9 @@ class PrivateController < ApplicationController
   def private_params
     params.require(:private).permit(:title,:content)
   end
-
+  def basic_auth
+    authenticate_or_request_with_http_basic do |username, password|
+      username == 'admin' && password == '2222'
+    end
+  end
 end
