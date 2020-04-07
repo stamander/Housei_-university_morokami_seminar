@@ -3,10 +3,10 @@
   = form_for @private,url: private_index_path, local: true do |twe|
     .form_box_contents
     .title
-    = twe.text_field :title
+    = twe.text_field :title,placeholder: "タイトル"
     .form_box_contents
     .contents
-    = twe.text_area :content
+    = twe.text_area :content,placeholder: "内容"
 
     .form_box_contents
     = twe.submit
