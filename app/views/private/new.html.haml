@@ -1,6 +1,6 @@
 .form
   .tweet_title 新規記事の作成
-  = form_for @private,url: new_private_path, local: true do |twe|
+  = form_for @private,url: private_index_path, local: true do |twe|
     .form_box_contents
     .title
     = twe.text_field :title
@@ -9,6 +9,7 @@
     = twe.text_area :content
 
     .form_box_contents
+    = twe.submit
 
 .another
   = link_to "ホームへ","/", class:"home"
