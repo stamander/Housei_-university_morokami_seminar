@@ -1,5 +1,6 @@
 .tweet_title 新規記事の作成
-= form_for @private do |twe|
+= form_for @private,url: new_private_path, local: true do |twe|
+= form_for @item,url: exhibitions_path ,local: true do |f|
 
   .title
   = twe.text_field :title

@@ -3,5 +3,6 @@ class PrivateController < ApplicationController
   end
 
 
-  
+  def new
+  end
 end
