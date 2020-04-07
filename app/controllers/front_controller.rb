@@ -1,4 +1,5 @@
 class FrontController < ApplicationController
-  def private
+  def index
     @privates = Private.all
+  end
 end

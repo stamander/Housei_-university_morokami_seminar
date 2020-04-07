@@ -1,5 +1,4 @@
 !!!
-!!!
 %html
   %head
     %title 法政大学社会学部諸上ゼミ
@@ -9,6 +8,35 @@
     %link{ rel: "stylesheet", type: "text/css", href: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"}
     = javascript_include_tag 'application', data: { turbolinks: { track: true }}
     %script{ type: "text/javascript", src: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"}
+
+    .header
+      .header__logo 
+
+        = link_to image_tag("logo1.jpg",class: "header__logo"), root_path
+        
+      
+      .header__another-box
+        .header__another-box__about 
+          = link_to "/front/:id", class: "header__another-box__about" do
+            %span<>
+            about us
+
+        .header__another-box__link 
+          = link_to history_index_path ,class: "header__another-box__link" do
+            %span<>
+            history
+        .header__another-box__introduction 
+          = link_to introduction_index_path,class: "header__another-box__introduction" do
+            %span<>
+            introduction
+        .header__another-box__contact 
+          = link_to contact_index_path,class: "header__another-box__contact" do
+            %span<>
+            contact
+        .header__another-box__contact 
+          = link_to private_index_path,class: "header__another-box__private" do
+            %span<>
+            private
     
     
 
