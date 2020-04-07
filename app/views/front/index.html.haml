@@ -55,6 +55,17 @@
       %script{:async => "", :charset => "utf-8", :src => "https://platform.twitter.com/widgets.js"}
 
 
+  .tweet
+    - @privates.each do |tweet|
+      .tweet_title
+      = tweet.title
+
+      .tweet_contents
+      =tweet.contents
+
+
+
+
 
 
 :javascript
