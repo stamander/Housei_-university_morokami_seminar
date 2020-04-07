@@ -3,7 +3,7 @@ class PrivateController < ApplicationController
   end
 
   def create
-    @private= Profile.new(private_params)
+    @private= Private.new(private_params)
     if @private.save
       redirect_to new_contact_path
       flash[:profile] = "お疲れ様です。提出が完了しました！"
