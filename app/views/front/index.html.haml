@@ -22,9 +22,7 @@
     .blog_box
       - @privates.each do |tweet|
         .tweet_title
-          = link_to tweet.title, root_path
-
-          
+          = link_to tweet.title, private_path(tweet.id), method: :get
           = link_to 'New', private_path(tweet.id), method: :delete ,class:"deletes"
 
 

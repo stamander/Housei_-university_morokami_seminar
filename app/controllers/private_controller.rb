@@ -1,6 +1,6 @@
 class PrivateController < ApplicationController
 
-  before_action :basic_auth
+  before_action :basic_auth,expect: [:show]
 
   def index
   end
@@ -24,8 +24,11 @@ class PrivateController < ApplicationController
     @private = Private.new
   end
 
+  def show
+  end
+
   def destroy
-    basic_auth
+  
     @private = Private.find_by(id:params[:id])
     if @private.destroy
       redirect_to root_path
