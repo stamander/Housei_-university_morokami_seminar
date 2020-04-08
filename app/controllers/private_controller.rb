@@ -25,6 +25,7 @@ class PrivateController < ApplicationController
   end
 
   def destroy
+    basic_auth
     @private = Private.find_by(id:params[:id])
     if @private.destroy
       redirect_to root_path

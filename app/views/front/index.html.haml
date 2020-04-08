@@ -24,8 +24,8 @@
         .tweet_title
           = link_to tweet.title, root_path
 
-          .delete
-            = link_to '削除', private_path(tweet.id), method: :delete
+          
+          = link_to 'New', private_path(tweet.id), method: :delete ,class:"deletes"
 
 
 
