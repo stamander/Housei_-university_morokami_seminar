@@ -1,6 +1,4 @@
 .blog
-
-  - @privates.each do |tweet|
-    .tweet_title
-      = tweet.title
-      = tweet.content
+  .show_box
+    = @privates.title
+    = @privates.content

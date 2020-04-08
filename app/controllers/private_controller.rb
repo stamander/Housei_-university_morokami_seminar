@@ -11,7 +11,7 @@ class PrivateController < ApplicationController
       redirect_to root_path
     else
       redirect_to new_private_path
-      flash[:profiles] = "まだ未入力の項目があります"
+      flash[:private] = "まだ未入力の項目があります"
       
       
     end
@@ -25,6 +25,7 @@ class PrivateController < ApplicationController
   end
 
   def show
+    @privates = Private.find_by(id:params[:id])
   end
 
   def destroy
