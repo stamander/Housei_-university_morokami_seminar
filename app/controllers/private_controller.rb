@@ -29,7 +29,7 @@ class PrivateController < ApplicationController
     if @private.destroy
       redirect_to root_path
     else
-      redirect_to contact_path
+      redirect_to private_path
     end
   end
 
