@@ -1,6 +1,6 @@
 class PrivateController < ApplicationController
 
-  before_action :basic_auth,expect: [:show]
+  before_action :basic_auth,only: [:new,:destroy]
 
   def index
   end
