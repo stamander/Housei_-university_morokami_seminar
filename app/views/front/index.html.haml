@@ -18,6 +18,7 @@
 
   .title information
   .news-box 
+    
 
     %html
     .iframe-wrap
@@ -28,13 +29,15 @@
       %script{:async => "", :charset => "utf-8", :src => "https://platform.twitter.com/widgets.js"}
 
 
-  .tweet
-    - @privates.each do |tweet|
-      .tweet_title
-      = tweet.title
+  .tweet_box 
+    .zemiblog zemiblog
 
-      .tweet_contents
-      = tweet.content
+    .blog_box
+      - @privates.each do |tweet|
+        .tweet_title
+        = tweet.title
+        .tweet_contents
+        = tweet.content
 
 
 
