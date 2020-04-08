@@ -8,10 +8,9 @@ class PrivateController < ApplicationController
   def create
     @private= Private.new(private_params)
     if @private.save
-      redirect_to new_contact_path
-      flash[:profile] = "お疲れ様です。提出が完了しました！"
+      redirect_to root_path
     else
-      redirect_to new_contact_path
+      redirect_to new_private_path
       flash[:profiles] = "まだ未入力の項目があります"
       
       

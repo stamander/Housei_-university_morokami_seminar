@@ -244,11 +244,18 @@ a{
 }
 
 .blog_box{
-  margin: auto;
+  margin: 50px auto;
   display: flex;
+  justify-content: space-around;
+
 }
 
-
+.tweet_title{
+  font-size: 20px;
+  height: 200px;
+  width: 200px;
+  
+}
 
 .wrapper{
   position: relative;
