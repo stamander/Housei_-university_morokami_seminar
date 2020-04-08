@@ -22,3 +22,25 @@
   width: 800px;
   height: 500px;
 }
+
+.blogss{
+  margin: auto;
+  width: 800px;
+  margin-top: 50px;
+
+  &_zemi{
+    font-size: 40px;
+    text-align: center;
+    color: navy;
+    margin-bottom: 50px;
+  }
+  &_title{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+  &_contents{
+    font-size: 20px;
+    margin: 50px;
+  }
+}
