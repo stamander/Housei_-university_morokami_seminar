@@ -22,8 +22,18 @@ class PrivateController < ApplicationController
 
   def new
     @private = Private.new
-
   end
+
+  def destroy
+    @private = Private.find_by(id:params[:id])
+    if @private.destroy
+      redirect_to root_path
+    else
+      redirect_to contact_path
+    end
+  end
+
+
 
   private
   def private_params

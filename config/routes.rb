@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   end
 
   resources :history, only: [:index]
-  resources :private, only: [:create,:new]
+  resources :private
 end
