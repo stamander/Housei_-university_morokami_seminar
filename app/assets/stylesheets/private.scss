@@ -35,15 +35,16 @@
     margin-bottom: 50px;
   }
   &_title{
-    display: flex;
     font-size: 30px;
     text-align: center;
     font-weight: bold;
     
-    &_time{
-      color: gray;
-      font-size: 10px;
-    }
+
+  }
+  &_time{
+    color: gray;
+    font-size: 10px;
+    text-align: right;
   }
   &_contents{
     font-size: 20px;
