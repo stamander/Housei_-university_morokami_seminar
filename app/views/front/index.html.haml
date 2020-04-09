@@ -23,11 +23,11 @@
   .news-box
     .tweet_box 
       .zemiblog zemiNews
-        .blog_box
-          - @privates.each do |tweet|
-            .tweet_title
-              = link_to tweet.title, private_path(tweet.id), method: :get
-              = link_to 'New', private_path(tweet.id), method: :delete ,class:"deletes"
+      .blog_box
+      - @privates.each do |tweet|
+        .tweet_title
+          = link_to tweet.title, private_path(tweet.id), method: :get
+          = link_to 'New', private_path(tweet.id), method: :delete ,class:"deletes"
         .news-box__twitter
           %html twitter
           %a.twitter-timeline{:href => "https://twitter.com/morozemi_hosei?ref_src=twsrc%5Etfw"} Tweets by morozemi_hosei
