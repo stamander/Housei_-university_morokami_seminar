@@ -27,10 +27,10 @@
       - @privates.each do |tweet|
         = link_to tweet.title, private_path(tweet.id), method: :get
         = link_to 'New', private_path(tweet.id), method: :delete ,class:"deletes"
-        .news-box__twitter
-          %html twitter
-          %a.twitter-timeline{:href => "https://twitter.com/morozemi_hosei?ref_src=twsrc%5Etfw"} Tweets by morozemi_hosei
-          %script{:async => "", :charset => "utf-8", :src => "https://platform.twitter.com/widgets.js"}
+      .news-box__twitter
+        %html twitter
+        %a.twitter-timeline{:href => "https://twitter.com/morozemi_hosei?ref_src=twsrc%5Etfw"} Tweets by morozemi_hosei
+        %script{:async => "", :charset => "utf-8", :src => "https://platform.twitter.com/widgets.js"}
 
   -# .tweet_box 
   -#   .zemiblog zemiNews
