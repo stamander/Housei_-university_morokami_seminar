@@ -83,11 +83,10 @@ a{
 .photo-box{
   width: 790px;
   height: 500px;
-  position: relative;
   margin:auto;
 
   .slider{
-    position: absolute;
+ 
     width: 800px;
     margin: 0 auto;
     .photo1{
@@ -117,12 +116,11 @@ a{
   }
 
   &__logo-box{
-    position: absolute;
     height: 50%;
     width: 100%;
     margin-top: 350px;
     &__contents1{
-      color:whitesmoke;
+      
       width: 100%;
       font-size: 50px;
       margin-bottom: 30px;
