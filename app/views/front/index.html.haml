@@ -20,19 +20,16 @@
         .tweet_title
           = link_to tweet.title, private_path(tweet.id), method: :get
           = link_to 'New', private_path(tweet.id), method: :delete ,class:"deletes"
+          
+    -#     %html
+    -# .iframe-wrap
+    -#   %iframe{src: "https://morozemi.ws.hosei.ac.jp/whatsnew.html", class:"info"}
     .news-box__twitter
       %html
       %a.twitter-timeline{:href => "https://twitter.com/morozemi_hosei?ref_src=twsrc%5Etfw"} Tweets by morozemi_hosei
       %script{:async => "", :charset => "utf-8", :src => "https://platform.twitter.com/widgets.js"}
 
-  -# .tweet_box 
-  -#   .zemiblog zemiNews
 
-  -#   .blog_box
-  -#     - @privates.each do |tweet|
-  -#       .tweet_title
-  -#         = link_to tweet.title, private_path(tweet.id), method: :get
-  -#         = link_to 'New', private_path(tweet.id), method: :delete ,class:"deletes"
 
 
 
