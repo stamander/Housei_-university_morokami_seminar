@@ -10,3 +10,81 @@
 @import "new";
 @import "confirm";
 @import "private";
+
+
+
+.header{
+
+  height: 90px;
+  width: 100%;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+  background-color: white;
+
+
+  &__logo{
+    
+    height: 100px;
+    width: 120px;
+    margin-left: 10%;
+   
+  }
+  &__logo:hover{
+  
+    transition: 1s;
+  }
+
+  &__another-box{
+    display: flex;
+    margin-left: 10%;
+    width: 60%;
+    justify-content: space-between;
+    
+    
+    &__about{
+      width: 100px;
+      height: 100px;
+
+    }
+    &__about:hover{
+  
+      transition: 1s;
+    }
+  
+    &__introduction{
+      width: 100px;
+      height: 100px;
+  
+    }
+    &__introduction:hover{
+
+      transition: 1s;
+    }
+
+
+    &__contact{
+      width: 100px;
+      height: 100px;
+      
+    }
+
+    &__contact:hover{
+    
+      transition: 1s;
+    }
+    
+    &__link{
+      width: 100px;
+      height: 100px;
+
+    }
+
+    &__link:hover{
+    
+      transition: 1s;
+    }
+  }
+}
