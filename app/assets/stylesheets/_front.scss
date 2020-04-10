@@ -83,7 +83,7 @@ a{
 .photo-box{
   width: 790px;
   height: 500px;
-  margin:auto;
+  margin:50px auto;
 
   .slider{
  
@@ -129,7 +129,7 @@ a{
     }
     &__contents2{
       width: 700px;
-      border: 1px solid hsla(0,0%,100%,.7);
+      border: 1px solid rgba(93, 52, 52, 0.7);
       margin: auto;
       padding: 8px;
       text-align: center;
@@ -141,12 +141,7 @@ a{
   }
 }
 
-.spanss{
-  color: white;
-  width: 700px;
-  margin: auto;
 
-}
 
 
 .title{
