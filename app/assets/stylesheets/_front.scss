@@ -59,8 +59,11 @@ a{
   }
 
   &__logo-box{
+    background-color: rgba($color: #0a0a09, $alpha: 0.3);
     position: absolute;
-    bottom: 20px;
+  
+    bottom: 0px;
+    height: 150px;
 
     &__contents1{
       color:whitesmoke;
@@ -75,8 +78,8 @@ a{
       border: 1px solid hsla(0,0%,100%,.7);
       padding: 10px;
       text-align: center;
-      width: 700px;
-      margin-left: 100px;
+      margin-left: 90px;
+
       border-radius: 22px;
       font-size: 20px;
 
