@@ -4,7 +4,7 @@ class CreateProfiles < ActiveRecord::Migration[5.2]
       t.string :name,null: false
       t.string :kana,null: false
       t.string :phone_number,null: false
-      t.string :phone_number,null: false
+      t.string :mail,null: false
       t.string :number,null: false
       t.string :undergraduate,null: false
       t.string :subject,null: false
