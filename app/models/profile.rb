@@ -4,6 +4,7 @@ class Profile < ApplicationRecord
   validates :name, presence: true
   validates :kana, presence: true
   validates :number, presence: true
+  validates :phone_number,presence: true
   validates :undergraduate, presence: true
   validates :subject, presence: true
   validates :gpa, presence: true

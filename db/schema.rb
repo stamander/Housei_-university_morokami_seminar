@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2020_04_06_231754) do
     t.string "name", null: false
     t.string "kana", null: false
     t.string "number", null: false
+    t.string "phone_number", null: false
     t.string "undergraduate", null: false
     t.string "subject", null: false
     t.float "gpa", null: false
