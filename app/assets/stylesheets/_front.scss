@@ -60,7 +60,7 @@ a{
 
   &__logo-box{
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
 
     &__contents1{
       color:whitesmoke;
@@ -73,9 +73,10 @@ a{
     &__contents2{
       color:whitesmoke;
       border: 1px solid hsla(0,0%,100%,.7);
-      padding: 8px;
+      padding: 10px;
       text-align: center;
-     
+      width: 700px;
+      margin-left: 100px;
       border-radius: 22px;
       font-size: 20px;
 
