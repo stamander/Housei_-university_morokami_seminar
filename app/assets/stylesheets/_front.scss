@@ -10,10 +10,10 @@ a{
   width: 790px;
   height: 500px;
   margin:50px auto;
-  
+  position: relative;
 
   .slider{
-    position: relative;
+    position: absolute;
     width: 800px;
     margin: 0 auto;
     .photo1{
