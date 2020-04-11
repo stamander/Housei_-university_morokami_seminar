@@ -4,10 +4,6 @@
 
 
   .photo-box
-    .photo-box__logo-box 
-    .photo-box__logo-box__contents1 MOROKAMI SEMINAR
-    .photo-box__logo-box__contents2
-      = link_to"What is Morokami Seminar ?", "/front/:id"
     %ul.slider
       = image_tag 'photo1.jpg', alt: 's', class: 'photo1'
       = image_tag 'photo2.jpg', alt: 's', class: 'photo2'
@@ -15,6 +11,10 @@
       = image_tag 'photo4.jpg', alt: 's', class: 'photo4'
       = image_tag 'photo5.jpg', alt: 's', class: 'photo5'
       = image_tag 'photo6.jpg', alt: 's', class: 'photo6'
+      .photo-box__logo-box 
+        .photo-box__logo-box__contents1 MOROKAMI SEMINAR
+        .photo-box__logo-box__contents2
+          = link_to"What is Morokami Seminar ?", "/front/:id"
 
   .title information
   .news-box 

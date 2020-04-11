@@ -10,6 +10,7 @@ a{
   width: 790px;
   height: 500px;
   margin:50px auto;
+  position: relative;
 
   .slider{
  
@@ -42,6 +43,7 @@ a{
   }
 
   &__logo-box{
+    position: absolute;
     width: 700px;
     margin: 50px auto;
     &__contents1{
