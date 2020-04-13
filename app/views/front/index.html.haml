@@ -22,7 +22,7 @@
         .tweet_title
           = link_to tweet.title, private_path(tweet.id), method: :get
           = link_to 'New', private_path(tweet.id), method: :delete ,class:"deletes"
-          = @tweet.created_at.strftime('%Y/%m/%d %H:%M')
+          = @tweet.created_at.strftime('%Y/%m/%d %H:%M'),
           
     -#     %html
     -# .iframe-wrap
