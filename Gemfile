@@ -81,3 +81,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'pry-rails'
 gem 'fog-aws'
+  gem 'momentjs-rails', '>= 2.9.0'
+  gem 'fullcalendar-rails'
+  
