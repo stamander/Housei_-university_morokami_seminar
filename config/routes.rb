@@ -10,4 +10,5 @@ Rails.application.routes.draw do
 
   resources :history, only: [:index]
   resources :private
+  resources :interview
 end
