@@ -1,7 +1,7 @@
 .simple-calendar {
-  margin: auto;
+  margin-left: 200px;
+
   
-  width: 100%;
   .day {
     width: 50px;
     height: 50px;
@@ -9,8 +9,6 @@
 
   .wday-0 {
     background-color: crimson;
-    width: 100px;
-    height: 100px;
   }
   .wday-1 {}
   .wday-2 {}
