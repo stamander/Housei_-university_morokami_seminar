@@ -1,12 +1,9 @@
-= form_with(model: @interview, local: true) do |form|
+= = form_for @private,url: private_index_path, local: true do |form|
   .title
     = form.label :title
     = form.text_field :title
   .time
     = form.label :start_time
     = form.datetime_select :start_time
-  .content
-    = form.label :content
-    = form.text_field :content
   .submit
     = form.submit
