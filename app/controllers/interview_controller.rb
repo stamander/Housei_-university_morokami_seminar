@@ -1,35 +1,35 @@
 class InterviewController < ApplicationController
   def index
-    @blogs = Blog.all
+    @interview = Interview.all
   end
 
   def new
-    @blog = Blog.new
+    @interview = Interview.new
   end
 
   def show
-    @blog = Blog.find(params[:id])
+    @interview = Interview.find(params[:id])
   end
 
   def create
-    Blog.create(blog_parameter)
-    redirect_to blogs_path
+    Interview.create(interview_parameter)
+    redirect_to interview_path
   end
 
   def destroy
-    @blog = Blog.find(params[:id])
-    @blog.destroy
-    redirect_to blogs_path, notice:"削除しました"
+    @interview = Interview.find(params[:id])
+    @interview.destroy
+    redirect_to interview_path, notice:"削除しました"
   end
 
   def edit
-    @blog = Blog.find(params[:id])
+    @interview= Interview.find(params[:id])
   end
 
   def update
-    @blog = Blog.find(params[:id])
-    if @blog.update(blog_parameter)
-      redirect_to blogs_path, notice: "編集しました"
+    @interview = Interview.find(params[:id])
+    if @interview.update(interview_parameter)
+      redirect_to interview_path, notice: "編集しました"
     else
       render 'edit'
     end
@@ -37,8 +37,8 @@ class InterviewController < ApplicationController
 
   private
 
-  def blog_parameter
-    params.require(:blog).permit(:title, :content, :start_time)
+  def interview_parameter
+    params.require(:interview).permit(:title, :content, :start_time)
   end
 
 end
