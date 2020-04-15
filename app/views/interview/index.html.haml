@@ -1,23 +1,19 @@
-%p#notice= notice
-%h1 自分の日記
-%table
-  %thead
-    %tr
-      %th タイトル
-      %th 時間
-      %th{:colspan => "3"}
-  %tbody
-    - @interview.each do |blog|
-      %tr
-        %td= blog.title
-        %td= blog.start_time.strftime("%Y-%m-%d %H:%M")
-        %td= link_to 'Show', blog
-        %td= link_to 'Edit', edit_blog_path(blog.id)
-        %td= link_to 'Destroy',blog_path(blog.id), method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to '日記をかく', new_interview_path
-= month_calendar events: @interview do |date, blogs|
-  = date.day
-  - blogs.each do |blog|
-    %div
-      = link_to blog.title, blog
+.blogs
+  .title 面接時間
+  %table
+    %thead
+
+    %tbody
+      - @interview.each do |blog|
+        %tr
+          %td= blog.title
+          %td= blog.start_time.strftime("%Y-%m-%d %H:%M")
+          %td= link_to 'Show', blog
+          %td= link_to 'Edit', edit_blog_path(blog.id)
+          %td= link_to 'Destroy',blog_path(blog.id), method: :delete, data: { confirm: 'Are you sure?' }
+  %br/
+  = month_calendar events: @interview do |date, blogs|
+    = date.day
+    - blogs.each do |blog|
+      %div
+        = link_to blog.title, blog
