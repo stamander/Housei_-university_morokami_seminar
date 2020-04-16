@@ -38,7 +38,7 @@ class InterviewController < ApplicationController
   private
 
   def interview_parameter
-    params.require(:interview).permit(:name, :content, :start_time)
+    params.require(:interview).permit(:name,:start_time)
   end
 
 end
