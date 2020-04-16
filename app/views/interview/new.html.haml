@@ -7,3 +7,14 @@
     = form.datetime_select :start_time
   .submit
     = form.submit
+
+
+
+%tbody
+  - @.each do |blog|
+    %tr
+      %td= blog.title
+      %td= blog.start_time.strftime("%Y-%m-%d %H:%M")
+      %td= link_to 'Show', blog
+      %td= link_to 'Edit', edit_blog_path(blog.id)
+      %td= link_to 'Destroy',blog_path(blog.id), method: :delete, data: { confirm: 'Are you sure?' }
