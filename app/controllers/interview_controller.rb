@@ -5,6 +5,7 @@ class InterviewController < ApplicationController
 
   def new
     @interview = Interview.new
+    @interviews = Interview.all
   end
 
   def show
@@ -17,7 +18,7 @@ class InterviewController < ApplicationController
   end
 
   def destroy
-    @interview = Interview.find(params[:id])
+    @interview = Interview.find_by(id:params[:id])
     @interview.destroy
     redirect_to interview_path, notice:"削除しました"
   end
