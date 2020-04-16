@@ -4,12 +4,6 @@
     = link_to "投稿する",new_interview_path 
     %thead
 
-    %tbody
-      - @interview.each do |blog|
-        %tr
-          %td= blog.name
-          %td= blog.start_time.strftime("%Y-%m-%d %H:%M")
-          %td= link_to 'Show', blog
 
   %br/
   = month_calendar events: @interview do |date, blogs|
@@ -17,3 +11,4 @@
     - blogs.each do |blog|
       %div
         = blog.name
+        = blog.start_time.strftime("%H:%M")
