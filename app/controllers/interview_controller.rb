@@ -22,6 +22,7 @@ class InterviewController < ApplicationController
   end
 
   def show
+    redirect_to new_interview_path
   end
 
   def edit
