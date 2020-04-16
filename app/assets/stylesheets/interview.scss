@@ -1,49 +1,63 @@
 .simple-calendar {
-  margin-left: 200px;
+
   margin-bottom: 100px;
 
   
   .day {
-    width: 100px;
+    
+    width: 1000px;
     height: 100px;
-    font-size: 20px;
+    font-size: 10px;
     border:1px solid;
     text-align: start;
   }
 
   .wday-0 {
-    background-color: crimson;
+    color: crimson;
+    border:black 1px solid;
+    width: 1000px;
+    height: 100px;
   }
   .wday-1 {}
   .wday-2 {}
   .wday-3 {}
   .wday-4 {}
   .wday-5 {}
-  .wday-6 {background-color: blue;
+  .wday-6 {color: blue;
+    border:black 1px solid;
   }
 
-  .today {}
-  .past {}
-  .future {}
+  .today {border:rgb(30, 2, 82) 2px solid;}
 
-  .start-date {}
+  
 
-  .prev-month {}
-  .next-month { }
+
+
+  .prev-month {background-color: rgba($color:rgb(202, 197, 197), $alpha: 1.0);
+  }
+  .next-month { background-color: rgba($color: rgb(238, 229, 229), $alpha: 1.0)
+
+  }
   .current-month {}
 
-  .has-events {}
   .calender-title{
     color: orange;
   }
 }
 
 .calendar-heading{
-  text-align: center;
+  justify-content: space-evenly;
   margin-bottom: 30px;
-
 }
 
+  
 
+
+
+.shedule{
+  font-size: 13px;
+  color: rgb(238, 132, 11);
+  
+}
 
  

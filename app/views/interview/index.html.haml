@@ -9,6 +9,6 @@
   = month_calendar events: @interview do |date, blogs|
     = date.day
     - blogs.each do |blog|
-      %div
+      .shedule
         = blog.name
         = blog.start_time.strftime("%H:%M")
