@@ -3,11 +3,9 @@
   %table
     = link_to "投稿する",new_interview_path 
     %thead
-
-
   %br/
   = month_calendar events: @interview do |date, blogs|
-    = date.day
+    -# = date.day
     - blogs.each do |blog|
       .shedule
         = blog.name
