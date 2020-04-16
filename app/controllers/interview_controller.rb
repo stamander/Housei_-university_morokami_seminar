@@ -13,7 +13,7 @@ class InterviewController < ApplicationController
 
   def create
     Interview.create(interview_parameter)
-    redirect_to interview_path
+    redirect_to interview_index_path
   end
 
   def destroy
@@ -38,7 +38,7 @@ class InterviewController < ApplicationController
   private
 
   def interview_parameter
-    params.require(:interview).permit(:title, :content, :start_time)
+    params.require(:interview).permit(:name, :content, :start_time)
   end
 
 end
