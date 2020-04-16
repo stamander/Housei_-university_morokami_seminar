@@ -18,8 +18,8 @@ class InterviewController < ApplicationController
   end
 
   def destroy
-    @interview = Interview.find_by(id:params[:id])
-    @interview.destroy
+    @interviews = Interview.find_by(id:params[:id])
+    @interviews.destroy
     redirect_to interview_path, notice:"削除しました"
   end
 
