@@ -11,7 +11,7 @@
 
 
 %tbody
-  - @.each do |blog|
+  - @interview.each do |blog|
     %tr
       %td= blog.title
       %td= blog.start_time.strftime("%Y-%m-%d %H:%M")
