@@ -21,6 +21,9 @@ class InterviewController < ApplicationController
     redirect_to interview_path, notice:"削除しました"
   end
 
+  def show
+  end
+
   def edit
     @interview= Interview.find(params[:id])
   end
