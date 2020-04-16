@@ -8,9 +8,7 @@ class InterviewController < ApplicationController
     @interviews = Interview.all
   end
 
-  def show
-    @interview = Interview.find(params[:id])
-  end
+
 
   def create
     Interview.create(interview_parameter)
