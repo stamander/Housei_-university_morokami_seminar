@@ -13,7 +13,8 @@ class CreateProfiles < ActiveRecord::Migration[5.2]
       t.text :pr,null: false
       t.text :life,null: false
       t.text :time,null: false
-      t.string :task,null: false
+      t.text :task,null: false
+      t.text :time1,null: false
 
       t.timestamps
     end
