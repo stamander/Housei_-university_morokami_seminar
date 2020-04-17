@@ -49,6 +49,10 @@
     .form_box_contents
       .form_box_contens_submit 課題の答え
       = f.text_area :task,placeholder: "※必須（参考文献も中に入れてください。書き方は論文を参考にしてください。）"
+
+    .form_box_contents
+      .form_box_contens_submit 面接希望時間
+      = f.text_area :time1,placeholder: "※必須　\n・●月●日（●曜日）●●：●●～●●：●●\n・●月●日（●曜日）●●：●●～●●：●●\n・●月●日（●曜日）●●：●●～●●：●●"
     .form_box_contents
       = f.submit "確認画面へ",class:"send"
 
