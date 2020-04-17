@@ -15,6 +15,7 @@ class Profile < ApplicationRecord
   validates :time, presence: true
   validates :task, presence: true
   validates :images, presence: true
+  validates :time1, presence: true
 
   
 
