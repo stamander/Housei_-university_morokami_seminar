@@ -1,18 +1,19 @@
-= form_for @interview,url: interview_index_path, local: true do |form|
-  .title
-    = form.label :name
-    = form.text_field :name
-  .time
-    = form.label :start_time
-    = form.datetime_select :start_time
-  .submit
-    = form.submit
+.blogs
+  = form_for @interview,url: interview_index_path, local: true do |form|
+    .title
+      = form.label :name
+      = form.text_field :name
+    .time
+      = form.label :start_time
+      = form.datetime_select :start_time
+    .submit
+      = form.submit
 
 
 
-%tbody
-  - @interviews.each do |blog|
-    %tr
-      %td= blog.name
-      %td= blog.start_time.strftime("%Y-%m-%d %H:%M")
-      %td= link_to 'Destroy',interview_path(blog.id), method: :delete, data: { confirm: 'Are you sure?' }
+  %tbody
+    - @interviews.each do |blog|
+      %tr
+        %td= blog.name
+        %td= blog.start_time.strftime("%Y-%m-%d %H:%M")
+        %td= link_to 'Destroy',interview_path(blog.id), method: :delete, data: { confirm: 'Are you sure?' }
