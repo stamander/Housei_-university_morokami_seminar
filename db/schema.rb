@@ -47,7 +47,8 @@ ActiveRecord::Schema.define(version: 2020_04_15_013233) do
     t.text "pr", null: false
     t.text "life", null: false
     t.text "time", null: false
-    t.string "task", null: false
+    t.text "task", null: false
+    t.text "time1", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
