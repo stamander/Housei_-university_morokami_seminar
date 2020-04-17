@@ -16,4 +16,4 @@
       %tr
         %td= blog.name
         %td= blog.start_time.strftime("%Y-%m-%d %H:%M")
-        %td= link_to 'Destroy',interview_path(blog.id), method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to 'Destroy',interview_path(blog.id), method: :delete, data: { confirm: 'Are you sure?' },class:"delete"
