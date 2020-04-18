@@ -132,13 +132,7 @@ a{
 }
 
 
-.footer{
-  width: 100%;
-  height: 30px;
-  text-align: center;
-  border-top: 1px solid;
-  margin:auto;
-}
+
 
 .photo-box__logo-box__contents2:hover{
   background-color: rgba($color: #f35a01, $alpha: 0.8);
@@ -195,13 +189,4 @@ a{
 }
 
 
-.wrapper{
-  position: relative;
-  min-height: 100vh;
 
-  .footer{
-    position: absolute;
-    bottom: 0;
-
-  }
-}
