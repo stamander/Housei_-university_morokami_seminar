@@ -1,6 +1,7 @@
 .simple-calendar {
 
   margin-bottom: 100px;
+ 
 
   
   .day {
@@ -10,6 +11,7 @@
     font-size: 10px;
     border:1px solid;
     text-align: start;
+    
   }
 
   .wday-0 {
@@ -18,7 +20,8 @@
 
 
   }
-  .wday-1 {}
+  .wday-1 {
+  }
   .wday-2 {}
   .wday-3 {}
   .wday-4 {}
@@ -57,8 +60,9 @@
 
 
 .shedule{
-  font-size: 10px;
+
   color: rgb(238, 132, 11);
+ 
   
 }
 
