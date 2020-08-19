@@ -18,16 +18,11 @@
   .news-box 
 
     .blog_box
-      - @privates.each do |tweet|
-        .tweet_title
-          = link_to tweet.title, private_path(tweet.id), method: :get
-          = link_to 'New', private_path(tweet.id), method: :delete ,class:"deletes"
-          .blogss_time
-            = tweet.created_at.strftime('%Y/%m/%d %H:%M')
+
           
-    -#     %html
-    -# .iframe-wrap
-    -#   %iframe{src: "https://morozemi.ws.hosei.ac.jp/whatsnew.html", class:"info"}
+      
+    .iframe-wrap
+      %iframe{src: "https://morozemi.ws.hosei.ac.jp/whatsnew.html", class:"info"}
     .news-box__twitter
       %html
       %a.twitter-timeline{:href => "https://twitter.com/morozemi_hosei?ref_src=twsrc%5Etfw"} Tweets by morozemi_hosei
