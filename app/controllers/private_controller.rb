@@ -20,9 +20,9 @@ class PrivateController < ApplicationController
 
 
 
-  def new
-    @private = Private.new
-  end
+  # def new
+  #   @private = Private.new
+  # end
 
   def show
     @privates = Private.find_by(id:params[:id])

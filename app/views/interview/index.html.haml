@@ -1,12 +1,12 @@
-.calender
-  .time_of_interview 面接時間
-  %table
+-# .calender
+-#   .time_of_interview 面接時間
+-#   %table
 
-    %thead
-  %br/
-  = month_calendar events: @interview do |date, blogs|
-    = date.day
-    - blogs.each do |blog|
-      .shedule
-        = blog.name
-        = blog.start_time.strftime("%H:%M")
+-#     %thead
+-#   %br/
+-#   = month_calendar events: @interview do |date, blogs|
+-#     = date.day
+-#     - blogs.each do |blog|
+-#       .shedule
+-#         = blog.name
+-#         = blog.start_time.strftime("%H:%M")

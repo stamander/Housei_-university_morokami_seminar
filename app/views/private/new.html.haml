@@ -1,17 +1,17 @@
-.blogs
-  .flash
-    = flash[:private]
-  .tweet_titles 新規記事の作成
-  = form_for @private,url: private_index_path, local: true do |twe|
-    .blogs_box
-      .blogs_box_title
-      = twe.text_field :title,placeholder: "タイトル"
-      .blogs_box_contents
-      = twe.text_area :content,placeholder: "内容"
+-# .blogs
+-#   .flash
+-#     = flash[:private]
+-#   .tweet_titles 新規記事の作成
+-#   = form_for @private,url: private_index_path, local: true do |twe|
+-#     .blogs_box
+-#       .blogs_box_title
+-#       = twe.text_field :title,placeholder: "タイトル"
+-#       .blogs_box_contents
+-#       = twe.text_area :content,placeholder: "内容"
 
-      .form_box_contents
-      = twe.submit
+-#       .form_box_contents
+-#       = twe.submit
 
 .another
-  = link_to "面接時間",new_interview_path, class:"home"
+
   = link_to "応募者一覧","/contact/:id", class:"zemi"
