@@ -54,7 +54,7 @@
       .form_box_contens_submit 面接希望時間
       = f.text_area :time1,placeholder: "※必須　\n・●月●日（●曜日）●●：●●～●●：●●\n・●月●日（●曜日）●●：●●～●●：●●\n・●月●日（●曜日）●●：●●～●●：●●"
     .form_box_contents
-      = f.submit "確認画面へ",class:"send"
+      = f.submit "確認画面へ",class:"send",:onclick => "window.alert('次ページの確認ページでも同じプロフィール画像を選択してください')"
 
 
 
