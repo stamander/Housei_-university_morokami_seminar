@@ -11,7 +11,7 @@ CarrierWave.configure do |config|
     aws_secret_access_key: Rails.application.secrets.aws_secret_access_key,
     region: 'ap-northeast-1'
   }
-  config.fog_public = false
+
   config.fog_directory  = 'stamander'
   config.asset_host = 'https://stamander.s3.amazonaws.com'
 end
