@@ -1,61 +1,137 @@
-.form 課題提出フォーム
-= form_with(model: @profile, local: true, url: {action: 'confirm'}) do |f|
-  .flash
-    = flash[:profile]
-  .flash
-    = flash[:profiles]
+-# .form 課題提出フォーム
+-# = form_with(model: @profile, local: true, url: {action: 'confirm'}) do |f|
+-#   .flash
+-#     = flash[:profile]
+-#   .flash
+-#     = flash[:profiles]
 
-  .form_box
-    .form_box_contents
-      .form_box_contents_image プロフィール写真
-      = f.fields_for :images do |i|
-        = i.file_field :src ,id: :profile_contents
-    .form_box_contents
-      .form_box_contents_name 名前
-      = f.text_field :name, placeholder: "※必須　ex.山田太郎"
-    .form_box_contents
-      .form_box_contents_kana かな
-      = f.text_field :kana,placeholder: "※必須　ex.やまだ　たろう"
-    .form_box_contents
-      .form_box_contents_number 電話番号
-      = f.text_field :phone_number, placeholder: "※必須　ex.07012345678"
-    .form_box_contents
-      .form_box_contents_number メールアドレス
-      = f.text_field :mail, placeholder: "※必須　ex.morozemi@gmail.com"
-    .form_box_contents
-      .form_box_contents_number 学籍番号
-      = f.text_field :number, placeholder: "※必須　ex.15e2201"
-    .form_box_contents
-      .form_box_contens_undergraduate 学部
-      = f.text_field :undergraduate, placeholder: "※必須　ex.社会学部"
-    .form_box_contents
-      .form_box_contens_subject 学科
-      = f.text_field :subject, placeholder: "※必須　ex.メディア社会学科"
-    .form_box_contents
-      .form_box_contens_gpa 一年次のGPA
-      = f.text_field :gpa, placeholder: "※必須　ex.4.0"
-    .form_box_contents
-      .form_box_contens_motivation 志望動機
-      = f.text_area :motivation, placeholder: "※必須"
-    .form_box_contents
-      .form_box_contens_pr 自己PR
-      = f.text_area :pr, placeholder: "※必須"
-    .form_box_contents
-      .form_box_contens_life 入ゼミした後どのような大学生活を送りたいですか？
-      = f.text_area :life, placeholder: "※必須"
-    .form_box_contents
-      .form_box_contens_time 入ゼミをした後どれだけ時間をかけられますか？
-      = f.text_area :time, placeholder: "※必須"
-    .form_box_contents
-      .form_box_contens_submit 課題の答え
-      = f.text_area :task,placeholder: "※必須（参考文献も中に入れてください。書き方は論文を参考にしてください。）"
+-#   .form_box
+-#     .form_box_contents
+-#       .form_box_contents_image プロフィール写真
+-#       = f.fields_for :images do |i|
+-#         = i.file_field :src ,id: :profile_contents
+-#     .form_box_contents
+-#       .form_box_contents_name 名前
+-#       = f.text_field :name, placeholder: "※必須　ex.山田太郎"
+-#     .form_box_contents
+-#       .form_box_contents_kana かな
+-#       = f.text_field :kana,placeholder: "※必須　ex.やまだ　たろう"
+-#     .form_box_contents
+-#       .form_box_contents_number 電話番号
+-#       = f.text_field :phone_number, placeholder: "※必須　ex.07012345678"
+-#     .form_box_contents
+-#       .form_box_contents_number メールアドレス
+-#       = f.text_field :mail, placeholder: "※必須　ex.morozemi@gmail.com"
+-#     .form_box_contents
+-#       .form_box_contents_number 学籍番号
+-#       = f.text_field :number, placeholder: "※必須　ex.15e2201"
+-#     .form_box_contents
+-#       .form_box_contens_undergraduate 学部
+-#       = f.text_field :undergraduate, placeholder: "※必須　ex.社会学部"
+-#     .form_box_contents
+-#       .form_box_contens_subject 学科
+-#       = f.text_field :subject, placeholder: "※必須　ex.メディア社会学科"
+-#     .form_box_contents
+-#       .form_box_contens_gpa 一年次のGPA
+-#       = f.text_field :gpa, placeholder: "※必須　ex.4.0"
+-#     .form_box_contents
+-#       .form_box_contens_motivation 志望動機
+-#       = f.text_area :motivation, placeholder: "※必須"
+-#     .form_box_contents
+-#       .form_box_contens_pr 自己PR
+-#       = f.text_area :pr, placeholder: "※必須"
+-#     .form_box_contents
+-#       .form_box_contens_life 入ゼミした後どのような大学生活を送りたいですか？
+-#       = f.text_area :life, placeholder: "※必須"
+-#     .form_box_contents
+-#       .form_box_contens_time 入ゼミをした後どれだけ時間をかけられますか？
+-#       = f.text_area :time, placeholder: "※必須"
+-#     .form_box_contents
+-#       .form_box_contens_submit 課題の答え
+-#       = f.text_area :task,placeholder: "※必須（参考文献も中に入れてください。書き方は論文を参考にしてください。）"
 
-    .form_box_contents
-      .form_box_contens_submit 面接希望時間
-      = f.text_area :time1,placeholder: "※必須　\n・●月●日（●曜日）●●：●●～●●：●●\n・●月●日（●曜日）●●：●●～●●：●●\n・●月●日（●曜日）●●：●●～●●：●●"
-    .form_box_contents
-      = f.submit "確認画面へ",class:"send",:onclick => "window.alert('次ページの確認ページでも同じプロフィール画像を選択してください')"
+-#     .form_box_contents
+-#       .form_box_contens_submit 面接希望時間
+-#       = f.text_area :time1,placeholder: "※必須　\n・●月●日（●曜日）●●：●●～●●：●●\n・●月●日（●曜日）●●：●●～●●：●●\n・●月●日（●曜日）●●：●●～●●：●●"
+-#     .form_box_contents
+-#       = f.submit "確認画面へ",class:"send",:onclick => "window.alert('次ページの確認ページでも同じプロフィール画像を選択してください')"
 
+
+%p.p2
+  %br/
+%p.p3 諸上ゼミ15期生選考ページ
+%p.p4
+  %br/
+%p.p5
+  選考方法: 課題＋面接
+  %span.Apple-converted-space  
+%p.p6 面接日：未定
+%p.p6 面接会場：未定
+%p.p4
+  %br/
+%p.p6
+  選考では　
+  %span.s2
+    %b 事前課題
+  %span.s3
+    %b 　
+  = succeed "\u{3000}\u{306e}\u{ff12}\u{70b9}\u{306e}\u{63d0}\u{51fa}\u{304c}\u{5fc5}\u{8981}\u{3067}\u{3059}\u{3002}" do
+    %span.s2
+      %b 面接準備シート
+%p.p4
+  %br/
+%p.p8
+  %b 事前課題について
+%p.p6
+  準備出来次第アップロードいたしますので情報公開をお待ちください
+  %a{:href => "file:///C:/Users/kanon/AppData/Local/Temp/Temp1_zemi%E7%B9%9D%E5%B8%99%E3%83%BB%E7%B9%9D%EF%A3%B0%E7%B9%9D%E5%80%A5%EF%BD%9A%E7%B9%9D%EF%BD%BC%E7%B9%A7%EF%BD%B7%E7%B9%A7%E3%83%BBmorozemi14%20-%20%E3%82%B3%E3%83%94%E3%83%BC.zip/15kadai.docx"}
+%p.p4
+  %br/
+%p.p8
+  %b 面接準備シートについて
+%p.p6
+  準備出来次第アップロードいたしますので情報公開をお待ちください
+  %a{:href => "file:///C:/Users/kanon/AppData/Local/Temp/Temp1_zemi%E7%B9%9D%E5%B8%99%E3%83%BB%E7%B9%9D%EF%A3%B0%E7%B9%9D%E5%80%A5%EF%BD%9A%E7%B9%9D%EF%BD%BC%E7%B9%A7%EF%BD%B7%E7%B9%A7%E3%83%BBmorozemi14%20-%20%E3%82%B3%E3%83%94%E3%83%BC.zip/15mensetsu.docx"}
+%p.p4
+  %br/
+%br/
+%br/
+%p.p6
+  以上の２点を記入の上で、メールに添付し、
+  %span.s1>
+    %b 後日指定する期限まで
+  にmorozemi14th@gmail.comに送信していただく予定です。
+%p.p4
+  %br/
+%br/
+%br/
+%p.p4
+  %br/
+%p.p8
+  %span.s2
+    %b 【注意点】
+%p.p6
+  ①
+  %b 課題の提出はメールでのみ行います。メールを受け取り次第、「受理完了メール」を送信します。
+%p.p6
+  ②「面接準備シート」の顔写真に関しては、
+  %b> Wordファイルの「写真を貼付」の枠内に貼り付けてください。
+  また、そこに貼り付けることが難しい場合はメールに添付してください。（顔写真は大学入学後の写真で、自身の顔が分かるものにしてください。）
+%p.p6
+  ③面接時間に関してはこちらから指定しメールでお伝えしますので、
+  %b> 後日公開される面接日は終日予定をあけておいてください。
+  もし、確実に予定が入っている時間があれば課題提出の際にメールに記入してください。
+%p.p4
+  %br/
+%p.p4
+  %br/
+%p.p6 質問等ございましたら、お気軽にmorozemi14th@gmail.comにご連絡ください。
+%p.p4
+  %br/
+%p.p4
+  %br/
+%p.p4
+  %br/
 
 
 
