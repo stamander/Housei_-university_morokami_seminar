@@ -128,7 +128,12 @@
       　　銀賞・審査員特別賞(池田賞)
       %br 
       %br 卒業論文７本執筆
-    = image_tag 'S__95313929.jpg', alt: 'twelbg', class: 'image-12'
+      %br
+      .w_message 卒業おめでとう🎉
+
+    = image_tag 'S__95313929.jpg', alt: 'twelbg', class: 'image-12',id:'graduate'
+
+    
 
   .five-box
     = image_tag '13ki.png', alt: 'thirteeng', class: 'image-13'
@@ -150,6 +155,10 @@
       %br 現在活躍中
       %br
     = image_tag '14ki.jpg', alt: 'twelbg', class: 'image-12'
+:javascript
+  $('#graduate').on('click',function(){
+    $(".w_message").fadeIn(2000);
+  })
     
 
 
