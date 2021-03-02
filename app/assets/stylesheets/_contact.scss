@@ -24,9 +24,17 @@
 .link-box{
   margin-left: 100px;
   width: 40%;
+  
 }
 
+a.links{
+  color: gray;
+  border-bottom: 1px solid;
+}
 
+a.links:hover{
+  color: black;
+}
 span{
   color: orange;
 
